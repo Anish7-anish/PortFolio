@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import btec from "../../Assets/Btec_img.png";
+import cheapbuy from "../../Assets/cheapbuylogin.gif";
+import slash from "../../Assets/Slash_1.gif";
+import gene from "../../Assets/Gene_2.png";
+import explore from "../../Assets/Explore_Black.png";
+import event from "../../Assets/Event_1.png";
 
 function Projects() {
   return (
@@ -23,67 +23,66 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={btec}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="BTEC Advanced Anamoly Detection System"
+              description="Developed an advanced Python-based analytical tool for North Carolina State University's BTEC water treatment facility. The system uses an LSTM neural network for real-time anomaly detection in time series data, with features like secure GraphQL authentication, dynamic state management, and automated notifications. Key technologies include TensorFlow, Keras, and Pandas."
+              ghLink="https://github.com/Anish7-anish/BTEC-State-Detection"
+              // demoLink="https://chatify-49.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={event}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Wolf Events Management System"
+              description="Developed WolfEvents, an event management system enabling users to manage events, book tickets, and leave reviews. Admins have additional capabilities to manage users, events, rooms, and reviews. The system includes bonus features like attendee filtering and ticket booking for other users. The application is built using Ruby on Rails and deployed on VCL. It features robust functionalities for both admins and attendees, with easy installation and testing setup."
+              ghLink="https://github.com/Anish7-anish/WolfEvents-Event-Management-System"
+              // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={gene}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
+              title="Gene Based Cancer Classification"
+              description="Developed a genomic pan-cancer classification system using image-based deep learning, leveraging Inception-ResNet-v2 and Guided Grad-CAM visualization. The project involves generating mutation maps from genomic data, training deep neural networks, and reproducing experimental results using TensorFlow and Keras. The system classifies cancer types and identifies important genes through heatmap analysis. Key components include data preprocessing, model training, and heatmap generation to enhance model interpretability."
               ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              // demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={slash}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Slash"
+              description="Developed Slash, a Python-based tool that scrapes popular e-commerce websites to find the best deals on searched items. The tool offers a user-friendly interface with features like sorting, filtering, wishlist management, and currency conversion. Designed to save time and money, Slash is ideal for students and data analysts needing quick, efficient price comparisons across multiple platforms."
+              ghLink="https://github.com/csc510fall23g45/slash"
+              // demoLink="https://plant49-ai.herokuapp.com/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={cheapbuy}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
+              title="Cheap Buy"
+              description="Developed CheapBuy, a web-based tool that simplifies online shopping by providing real-time price comparisons across multiple e-commerce platforms like Amazon, Walmart, and eBay. The platform features user accounts, personalized wishlists, and enhanced UI for a seamless shopping experience. CheapBuy enables users to effortlessly find the best deals, save time, and personalize their shopping process through advanced filtering and multi-site search capabilities."
+              ghLink="https://github.com/csc510fall23g45/cheapBuy"
               // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={explore}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              title="Explore Black"
+              description="Explore Black is a digital platform designed to celebrate the history, culture, and achievements of the Black community. It offers public access to educational content while providing an exclusive, secure space for community members to engage in discussions, blogs, and real-time chat. Built with HTML, CSS, and JavaScript, Explore Black strikes a balance between public awareness and fostering a sense of unity and belonging within the Black community."
+              ghLink="https://github.com/VrushankiPatel/Explore-Black"
               // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
           </Col>
