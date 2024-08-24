@@ -11,7 +11,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
+import { CgBrowser, CgFileDocument } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
 function NavBar() {
@@ -89,6 +89,17 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgBrowser style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
+
 
             <Nav.Item className="fork-btn">
               <Button
