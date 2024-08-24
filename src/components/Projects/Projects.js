@@ -49,7 +49,7 @@ function Projects() {
               isBlog={false}
               title="Gene Based Cancer Classification"
               description="Developed a genomic pan-cancer classification system using image-based deep learning, leveraging Inception-ResNet-v2 and Guided Grad-CAM visualization. The project involves generating mutation maps from genomic data, training deep neural networks, and reproducing experimental results using TensorFlow and Keras. The system classifies cancer types and identifies important genes through heatmap analysis. Key components include data preprocessing, model training, and heatmap generation to enhance model interpretability."
-              ghLink="https://github.com/soumyajit4419/Editor.io"
+              ghLink="https://github.com/Anish7-anish/Gene-Based-Cancer-Classification"
               // demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
