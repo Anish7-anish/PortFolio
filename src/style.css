@@ -2,18 +2,18 @@ html {
   /* Updated gradient for a smoother background */
   --section-background-color: linear-gradient(
     to bottom right,
-    rgba(22, 22, 30, 0.8),
-    rgba(17, 17, 36, 0.9)
+    #000000,
+    #333333
   );
 
   --image-gradient: linear-gradient(
     to bottom right,
-    rgba(22, 22, 30, 0.7),
-    rgba(17, 17, 36, 0.8)
+    #000000,
+    #333333
   );
 
-  /* Updated primary accent color to a teal shade */
-  --imp-text-color: #4ecdc4;
+  /* Monochrome accent color */
+  --imp-text-color: #f5f5f5;
 }
 
 .accent {
@@ -251,17 +251,18 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image: linear-gradient(to bottom right, #000000, #333333);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 40px !important;
   padding-top: 40px !important;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .home-content {
   padding: 9rem 0 2rem !important;
-  color: whitesmoke;
+  color: #f5f5f5;
   text-align: left;
 }
 
@@ -279,19 +280,50 @@ button:focus {
 }
 
 .main-name {
-  color: #4ecdc4;
+  color: #f5f5f5;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #4ecdc4 !important;
+  color: #f5f5f5 !important;
   font-weight: 600 !important;
   letter-spacing: 0.8px !important;
 }
 
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #4ecdc4 !important;
+  color: #f5f5f5 !important;
+}
+
+.home-header {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.home-section img {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 767px) {
@@ -321,7 +353,7 @@ button:focus {
   position: relative;
   padding-bottom: 80px !important;
   padding-top: 80px !important;
-  background-color: #121420;
+  background-color: #000000;
 }
 
 .home-about-description {
@@ -329,6 +361,16 @@ button:focus {
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
+}
+
+.home-about-description,
+.myAvtar {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.myAvtar {
+  animation-delay: 0.3s;
 }
 
 .home-about-body {
@@ -364,6 +406,7 @@ button:focus {
   border-radius: 50% !important;
   transition: 0.5s !important;
   margin: 0 8px;
+  color: #000000;
 }
 
 .home-social-icons::before {
@@ -374,7 +417,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #4ecdc4;
+  background: #000000;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -382,13 +425,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #4ecdc4;
+  box-shadow: 0 0 15px #ffffff;
 }
 
 .home-social-icons:hover {
-  color: #4ecdc4;
-  box-shadow: 0 0 15px #4ecdc4;
-  text-shadow: 0 0 2px #4ecdc4;
+  color: #000000;
+  box-shadow: 0 0 15px #ffffff;
+  text-shadow: 0 0 2px #ffffff;
 }
 
 .social-icons {
@@ -398,7 +441,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #4ecdc4 !important;
+  color: #000000 !important;
 }
 
 /* --------- */
