@@ -1,59 +1,62 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { Container, Box, Typography, IconButton, Stack } from "@mui/material";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const year = new Date().getFullYear();
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Anish Rao Toorpu</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} AT</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/Anish7-anish"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/anish-rao-toorpu-a4463821a/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/anishhh_07"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+    <Box className="footer">
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
+            alignItems: "center",
+            gap: 2,
+          }}
+        >
+          <Typography variant="body2" sx={{ textAlign: "center", color: "#ffffff" }}>
+            Designed and Developed by Anish Rao Toorpu
+          </Typography>
+          <Typography variant="body2" sx={{ textAlign: "center", color: "#ffffff" }}>
+            Copyright © {year} AT
+          </Typography>
+          <Stack direction="row" justifyContent="center" spacing={1.5}>
+            <IconButton
+              component="a"
+              href="https://github.com/Anish7-anish"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              sx={{ color: "#ffffff" }}
+            >
+              <AiFillGithub />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://www.linkedin.com/in/anish-rao-toorpu-a4463821a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              sx={{ color: "#ffffff" }}
+            >
+              <FaLinkedinIn />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://www.instagram.com/anishhh_07"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              sx={{ color: "#ffffff" }}
+            >
+              <AiFillInstagram />
+            </IconButton>
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
   );
 }
 

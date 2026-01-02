@@ -1,39 +1,52 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Button,
+  Typography,
+  Stack,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-function ProjectCards(props) {
+function ProjectCards({ imgPath, title, description, ghLink, demoLink, alt }) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
+      <CardMedia component="img" height="220" image={imgPath} alt={alt || title} className="project-card-img" />
+      <CardContent>
+        <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+          {title}
+        </Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary", lineHeight: 1.8 }}>
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ px: 2, pb: 2 }}>
+        <Stack direction="row" spacing={1}>
           <Button
-            variant="primary"
-            href={props.demoLink}
+            variant="outlined"
+            startIcon={<GitHubIcon />}
+            href={ghLink}
             target="_blank"
-            style={{ marginLeft: "10px" }}
+            rel="noopener noreferrer"
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            GitHub
           </Button>
-        )}
-      </Card.Body>
+          {demoLink && (
+            <Button
+              variant="contained"
+              startIcon={<OpenInNewIcon />}
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Demo
+            </Button>
+          )}
+        </Stack>
+      </CardActions>
     </Card>
   );
 }

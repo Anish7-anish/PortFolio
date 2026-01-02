@@ -1,89 +1,83 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import Particle from "../Particle";
 import ExperienceCards from "./ExperienceCard";
 import ncsu from "../../Assets/ncsu.png";
 import ncsubtec from "../../Assets/ncsu_logo.png";
 import cog from "../../Assets/cog_logo.png";
-import skill from "../../Assets/skill_logo.png";
+import isimcha from "../../Assets/iSimcha.png";
 
-const title1 = <strong className="purple">Graduate Student Assistant</strong>;
-const title2 = <strong className="purple">Software Engineer Intern</strong>;
-const title3 = <strong className="purple">Data Science Intern</strong>;
+const experiences = [
+  {
+    imgPath: isimcha,
+    role: "Software Engineer",
+    company: "iSimcha, LLC",
+    dates: "May 2025 - Present",
+    alt: "iSimcha logo",
+    bullets: [
+      "Built distributed LLM inference pipelines on GCP, improving throughput by 30% and enabling scalable deployments.",
+      "Fine-tuned healthcare LLMs and integrated LiteLLM, reducing perplexity by 18% and boosting translation accuracy.",
+      "Deployed Cloud Functions + Firestore workflows, improving model selection efficiency by 25%.",
+    ],
+  },
+  {
+    imgPath: ncsu,
+    role: "AI Engineer",
+    company: "North Carolina State University",
+    dates: "May 2025 - Present",
+    alt: "North Carolina State University logo",
+    bullets: [
+      "Built GPT-based NLP models to classify 500+ course objectives with 85% accuracy and flag accessibility gaps.",
+      "Delivered a secure Python/OAuth2 backend for Moodle extraction, cutting audit time by 60%.",
+      "Shipped a React interface with real-time feedback and encryption, improving review efficiency by 40%.",
+    ],
+  },
+  {
+    imgPath: ncsubtec,
+    role: "Software Engineer",
+    company: "North Carolina State University",
+    dates: "September 2023 - May 2025",
+    alt: "NCSU BTEC logo",
+    bullets: [
+      "Built an LSTM anomaly detection system for BTEC, improving operational efficiency by 40%.",
+      "Hardened token retrieval + GraphQL flows, reducing data issues by 30%.",
+      "Created AWS-backed analytics and serverless APIs, boosting reliability and automation.",
+    ],
+  },
+  {
+    imgPath: cog,
+    role: "Software Engineer",
+    company: "Cognizant Technology Solutions",
+    dates: "February 2023 - June 2023",
+    alt: "Cognizant logo",
+    bullets: [
+      "Built scalable loan systems in Java/Spring Boot, improving efficiency by 30%.",
+      "Resolved production issues with Git/Jenkins workflows, cutting complaints by 20%.",
+      "Automated event streaming with Kafka to reduce manual effort and costs.",
+    ],
+  },
+];
 
 function Experience() {
   return (
-    <Container fluid className="project-section">
+    <Box className="project-section">
       <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My <strong className="purple">Work Experience </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-            Recent Projects Overview
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ExperienceCards
-              imgPath={ncsu}
-              isBlog={false}
-              title= {title1}
-              description={
-                <>
-                    <p>Leveraged Python to perform comprehensive Data Analysis to deliver actionable insights on projects focused on Student Mental Health Data and Transfer Student Preparedness that informed program improvements.</p>
-                    <p>Designed and launched the program’s website using WordPress to catalog professional development training and integrated it with the course registration system, and provided support in instructional design</p>
-                </>
-                }
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCards
-              imgPath={ncsubtec}
-              isBlog={false}
-              title={title2}
-              description={
-              <>
-                  <p>Developed and implemented an Advanced Anomaly Detection System for NCSU BTEC Water Treatment Facility using LSTM neural networks, enhancing operational efficiency by 40%.</p>
-                  <p>Engineered secure token retrieval and enhanced GraphQL request handling, improving data security and reducing data retrieval issues by 30%.</p>
-                  <p>Designed visualization tools and automatic email notifications, facilitating proactive operational management and timely responses to anomalies, resulting in a 25% improvement in system reliability.</p>
-              </>
-              }
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCards
-              imgPath={cog}
-              isBlog={false}
-              title={title2}
-              description={
-                <>
-                    <p>Pioneered the development and successful implementation of loan management applications using the Pega low code platform, leading to a remarkable 30% boost in operational efficiency.</p>
-                    <p>Actively collaborated with cross-functional teams to swiftly identify and expertly resolve bugs and issues within the loan management applications, yielding a noteworthy 20% reduction in customer complaints.</p>
-                    <p>Leveraged Pega's low code platform to craft and deploy automated workflows, resulting in substantial time and cost savings, thus enhancing company productivity.</p>
-                </>
-                }            
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCards
-              imgPath={skill}
-              isBlog={false}
-              title={title3}
-              description={
-                <>
-                    <p>Conducted in-depth Exploratory Data Analysis (EDA) and executed precise Feature Engineering on diverse datasets.</p>
-                    <p>Acquired foundational expertise in constructing machine learning models from the ground up and adeptly fine-tuned parameters to achieve targeted outcomes.</p>
-                    <p>Applied advanced statistical techniques during Exploratory Data Analysis (EDA) and leveraged Feature Engineering to enhance data quality, contributing to a substantial 35% increase in predictive model accuracy.</p>
-                </>
-                }
-            />
-          </Col>
-        </Row>
+      <Container maxWidth="lg">
+        <Typography variant="h3" className="project-heading" sx={{ fontWeight: 700 }}>
+          My <span className="purple">Work Experience</span>
+        </Typography>
+        <Typography sx={{ color: "text.secondary", mt: 1 }}>
+          Recent projects and roles overview.
+        </Typography>
+        <Grid container spacing={3} sx={{ mt: 2 }}>
+          {experiences.map((experience) => (
+            <Grid key={experience.title + experience.imgPath} item xs={12} md={4}>
+              <ExperienceCards {...experience} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
-    </Container>
+    </Box>
   );
 }
 

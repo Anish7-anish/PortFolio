@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Grid, Box } from "@mui/material";
 import {
   SiVisualstudiocode,
   SiVercel,
@@ -8,25 +8,19 @@ import {
   SiAmazonaws,
 } from "react-icons/si";
 
+const icons = [SiMacos, SiVisualstudiocode, SiAmazonaws, SiIntellijidea, SiVercel];
+
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMacos />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonaws />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiIntellijidea />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-    </Row>
+    <Grid container spacing={2} justifyContent="center" sx={{ py: 4 }}>
+      {icons.map((IconComponent, index) => (
+        <Grid key={index} item xs={4} sm={3} md={2}>
+          <Box className="tech-icons">
+            <IconComponent />
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
   );
 }
 
