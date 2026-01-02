@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Grid, Box } from "@mui/material";
 import {
   DiJavascript1,
   DiReact,
@@ -19,52 +19,34 @@ import {
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
+const icons = [
+  DiPython,
+  DiJavascript1,
+  TbBrandGolang,
+  DiNodejs,
+  DiReact,
+  SiMysql,
+  DiMongodb,
+  SiSpringboot,
+  DiGit,
+  SiTensorflow,
+  SiRubyonrails,
+  SiKeras,
+  SiGraphql,
+  DiJava,
+];
+
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSpringboot />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRubyonrails />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiKeras />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGraphql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-    </Row>
+    <Grid container spacing={2} justifyContent="center" sx={{ py: 4 }}>
+      {icons.map((IconComponent, index) => (
+        <Grid key={index} item xs={4} sm={3} md={2}>
+          <Box className="tech-icons">
+            <IconComponent />
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
   );
 }
 

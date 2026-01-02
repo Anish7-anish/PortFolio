@@ -1,55 +1,55 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Box, Button, Stack } from "@mui/material";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Anish_Resume.pdf";
+import pdf from "../../Assets/Anish_Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div>
-      <Container fluid className="resume-section">
-        <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+    <Box className="resume-section">
+      <Particle />
+      <Container maxWidth="lg">
+        <Stack alignItems="center" spacing={2} sx={{ pt: 4 }}>
           <Button
-            variant="primary"
+            variant="outlined"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            rel="noopener noreferrer"
+            startIcon={<AiOutlineDownload />}
+            sx={{ maxWidth: 250 }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            Download CV
           </Button>
-        </Row>
-
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+          <Box className="resume">
+            <Document file={pdf}>
+              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.65} />
+            </Document>
+          </Box>
           <Button
-            variant="primary"
+            variant="contained"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            rel="noopener noreferrer"
+            startIcon={<AiOutlineDownload />}
+            sx={{ maxWidth: 250 }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            Download CV
           </Button>
-        </Row>
+        </Stack>
       </Container>
-    </div>
+    </Box>
   );
 }
 

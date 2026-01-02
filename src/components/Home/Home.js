@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -8,39 +8,38 @@ import Type from "./Type";
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Box className="home-section" id="home">
         <Particle />
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+        <Container maxWidth="lg" className="home-content">
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={7} className="home-header">
+              <Typography variant="h2" className="heading" sx={{ pb: 2 }}>
                 Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className="wave" role="img" aria-label="waving hand">
                   👋🏻
                 </span>
-              </h1>
+              </Typography>
 
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> ANISH RAO TOORPU</strong>
-              </h1>
+              <Typography variant="h2" className="heading-name" sx={{ fontWeight: 700 }}>
+                I'M <span className="main-name">ANISH RAO TOORPU</span>
+              </Typography>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <Box sx={{ pt: 6, textAlign: "left" }}>
                 <Type />
-              </div>
-            </Col>
+              </Box>
+            </Grid>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
+            <Grid item xs={12} md={5} sx={{ display: "flex", justifyContent: "center" }}>
+              <Box
+                component="img"
                 src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                alt="Illustration of developer at work"
+                sx={{ maxHeight: 420, width: "100%", maxWidth: 420 }}
               />
-            </Col>
-          </Row>
+            </Grid>
+          </Grid>
         </Container>
-      </Container>
+      </Box>
       <Home2 />
     </section>
   );

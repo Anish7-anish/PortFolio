@@ -1,14 +1,22 @@
 import React from "react";
 import Particles from "react-tsparticles";
+import { useMediaQuery } from "@mui/material";
 
 function Particle() {
+  const prefersReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
+  if (prefersReducedMotion) {
+    return null;
+  }
+
   return (
     <Particles
       id="tsparticles"
       params={{
         particles: {
           number: {
-            value: 160,
+            value: isSmallScreen ? 60 : 120,
             density: {
               enable: true,
               value_area: 1500,
@@ -20,7 +28,7 @@ function Particle() {
           },
           move: {
             direction: "right",
-            speed: 0.05,
+            speed: 0.08,
           },
           size: {
             value: 1,

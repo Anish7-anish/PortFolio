@@ -1,53 +1,44 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-import Github from "./Github.js"
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <Box className="about-section">
       <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
-            </h1>
+      <Container maxWidth="lg">
+        <Grid container spacing={4} alignItems="center" sx={{ py: 2 }}>
+          <Grid item xs={12} md={7}>
+            <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
+              Know Who <span className="purple">I'M</span>
+            </Typography>
             <Aboutcard />
-          </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
-          </Col>
-        </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
+          </Grid>
+          <Grid item xs={12} md={5} className="about-img" sx={{ textAlign: "center" }}>
+            <Box
+              component="img"
+              src={laptopImg}
+              alt="Work setup illustration"
+              sx={{ width: "100%", maxWidth: 420 }}
+            />
+          </Grid>
+        </Grid>
 
+        <Typography variant="h4" className="project-heading" sx={{ fontWeight: 700, mt: 4 }}>
+          Professional <span className="purple">Skillset</span>
+        </Typography>
         <Techstack />
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
+        <Typography variant="h4" className="project-heading" sx={{ fontWeight: 700, mt: 3 }}>
+          <span className="purple">Tools</span> I use
+        </Typography>
         <Toolstack />
-
-        {/* <Github /> */}
       </Container>
-    </Container>
+    </Box>
   );
 }
 

@@ -1,21 +1,21 @@
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import GitHubCalendar from "react-github-calendar";
-import { Row } from "react-bootstrap";
 
 function Github() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-      <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
-      </h1>
+    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", pb: 2 }}>
+      <Typography variant="h4" className="project-heading" sx={{ pb: 2 }}>
+        Days I <span className="purple">Code</span>
+      </Typography>
       <GitHubCalendar
         username="Anish7-anish"
         blockSize={15}
         blockMargin={5}
-        color="#c084f5"
+        color="#0b0b0b"
         fontSize={16}
       />
-    </Row>
+    </Box>
   );
 }
 

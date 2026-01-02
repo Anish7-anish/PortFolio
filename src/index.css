@@ -1,8 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-base: #f5f5f2;
+  --bg-section: #f1f1ee;
+  --bg-section-alt: #ecece7;
+  --bg-card: #fcfcfa;
+  --text-primary: #0b0b0b;
+  --text-secondary: #4b4b4b;
+  --border-soft: rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.16);
+  --image-gradient: linear-gradient(120deg, rgba(245, 245, 242, 0.9), rgba(239, 239, 236, 0.96));
+  --section-background-color: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-base) 100%);
+  --scroll-thumb: rgba(0, 0, 0, 0.35);
+  --scroll-thumb-hover: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] {
+  --bg-base: #0b0b0b;
+  --bg-section: #101010;
+  --bg-section-alt: #151515;
+  --bg-card: #151515;
+  --text-primary: #f5f5f2;
+  --text-secondary: #c9c9c9;
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.6);
+  --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.75);
+  --image-gradient: linear-gradient(120deg, rgba(18, 18, 18, 0.9), rgba(12, 12, 12, 0.96));
+  --section-background-color: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-base) 100%);
+  --scroll-thumb: rgba(255, 255, 255, 0.25);
+  --scroll-thumb-hover: rgba(255, 255, 255, 0.45);
+}
+
 body {
   margin: 0;
-  font-family: "Raleway", serif !important;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
+
+* {
+  box-sizing: border-box;
 }
