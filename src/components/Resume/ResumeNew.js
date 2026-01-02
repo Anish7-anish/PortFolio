@@ -21,9 +21,9 @@ function ResumeNew() {
     <Box className="resume-section">
       <Particle />
       <Container maxWidth="lg">
-        <Stack alignItems="center" spacing={2} sx={{ pt: 4 }}>
+        <Stack alignItems="center" spacing={2} sx={{ pt: 2 }}>
           <Button
-            variant="outlined"
+            variant="contained"
             href={pdf}
             target="_blank"
             rel="noopener noreferrer"

@@ -4,21 +4,33 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view" sx={{ backgroundColor: "#ffffff", borderRadius: 3 }}>
-      <CardContent>
-        <Typography variant="body1" sx={{ lineHeight: 1.9, color: "text.secondary" }}>
-          Hi Everyone, I am <span className="purple">Anish Rao Toorpu</span> from
-          <span className="purple"> Hyderabad, India.</span>
+    <Card
+      className="quote-card-view"
+      sx={{ backgroundColor: "background.paper", borderRadius: 3, width: "100%" }}
+    >
+      <CardContent sx={{ px: { xs: 3, md: 4 }, py: { xs: 3, md: 4 } }}>
+        <Typography variant="body1" sx={{ lineHeight: 1.9, color: "text.secondary", textAlign: "left" }}>
+          I’m <span className="purple">Anish Rao Toorpu</span>, a Software Engineer based in Raleigh,
+          North Carolina.
           <br />
-          I am currently working as a Graduate Student Assistant at CALS AP NCSU.
           <br />
-          I am currently pursuing my Masters in Computer Science at North Carolina State University.
+          I currently work at iSimcha, LLC, where I build and deploy scalable, distributed LLM
+          inference pipelines on cloud platforms.
+          <br />
+          <br />
+          I completed my Master of Computer Science from North Carolina State University in May
+          2025, with a strong focus on machine learning, distributed systems, and full-stack
+          development.
+          <br />
+          <br />
+          I’m actively seeking full-time Software Development Engineer (SDE) or Machine Learning
+          Engineer (MLE) roles where I can design and deliver production-grade, high-impact systems.
           <br />
           <br />
           Apart from coding, some other activities that I love to do!
         </Typography>
 
-        <Box sx={{ mt: 2, display: "grid", gap: 1 }}>
+        <Box sx={{ mt: 3, display: "grid", gap: 1 }}>
           {[
             "Playing Valorant",
             "Playing Cricket",
@@ -31,10 +43,10 @@ function AboutCard() {
           ))}
         </Box>
 
-        <Typography variant="subtitle2" sx={{ mt: 3, color: "text.secondary" }}>
+        <Typography variant="subtitle2" sx={{ mt: 3, color: "text.secondary", textAlign: "left" }}>
           "I have always believed that process is more important than results."
         </Typography>
-        <Typography variant="caption" sx={{ color: "text.secondary" }}>
+        <Typography variant="caption" sx={{ color: "text.secondary", textAlign: "left" }}>
           Ms Dhoni
         </Typography>
       </CardContent>

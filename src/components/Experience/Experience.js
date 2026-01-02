@@ -5,46 +5,55 @@ import ExperienceCards from "./ExperienceCard";
 import ncsu from "../../Assets/ncsu.png";
 import ncsubtec from "../../Assets/ncsu_logo.png";
 import cog from "../../Assets/cog_logo.png";
-import skill from "../../Assets/skill_logo.png";
+import isimcha from "../../Assets/iSimcha.png";
 
 const experiences = [
   {
+    imgPath: isimcha,
+    role: "Software Engineer",
+    company: "iSimcha, LLC",
+    dates: "May 2025 - Present",
+    alt: "iSimcha logo",
+    bullets: [
+      "Built distributed LLM inference pipelines on GCP, improving throughput by 30% and enabling scalable deployments.",
+      "Fine-tuned healthcare LLMs and integrated LiteLLM, reducing perplexity by 18% and boosting translation accuracy.",
+      "Deployed Cloud Functions + Firestore workflows, improving model selection efficiency by 25%.",
+    ],
+  },
+  {
     imgPath: ncsu,
-    title: "Software Engineer",
+    role: "AI Engineer",
+    company: "North Carolina State University",
+    dates: "May 2025 - Present",
     alt: "North Carolina State University logo",
     bullets: [
-      "Leveraged Python to perform comprehensive data analysis on student mental health and transfer student preparedness, delivering actionable insights for program improvements.",
-      "Designed and launched the program website in WordPress to catalog professional development training and integrate with course registration.",
+      "Built GPT-based NLP models to classify 500+ course objectives with 85% accuracy and flag accessibility gaps.",
+      "Delivered a secure Python/OAuth2 backend for Moodle extraction, cutting audit time by 60%.",
+      "Shipped a React interface with real-time feedback and encryption, improving review efficiency by 40%.",
     ],
   },
   {
     imgPath: ncsubtec,
-    title: "Software Engineer",
+    role: "Software Engineer",
+    company: "North Carolina State University",
+    dates: "September 2023 - May 2025",
     alt: "NCSU BTEC logo",
     bullets: [
-      "Developed an anomaly detection system for the NCSU BTEC water treatment facility using LSTM neural networks, boosting operational efficiency by 40%.",
-      "Engineered secure token retrieval and improved GraphQL request handling, reducing data retrieval issues by 30%.",
-      "Designed visualization tools and automated email notifications for proactive operational management, improving system reliability by 25%.",
+      "Built an LSTM anomaly detection system for BTEC, improving operational efficiency by 40%.",
+      "Hardened token retrieval + GraphQL flows, reducing data issues by 30%.",
+      "Created AWS-backed analytics and serverless APIs, boosting reliability and automation.",
     ],
   },
   {
     imgPath: cog,
-    title: "Software Engineer",
+    role: "Software Engineer",
+    company: "Cognizant Technology Solutions",
+    dates: "February 2023 - June 2023",
     alt: "Cognizant logo",
     bullets: [
-      "Led development of loan management applications on the Pega low-code platform, increasing operational efficiency by 30%.",
-      "Collaborated with cross-functional teams to resolve bugs quickly, reducing customer complaints by 20%.",
-      "Built automated workflows that saved time and costs while improving productivity.",
-    ],
-  },
-  {
-    imgPath: skill,
-    title: "Machine Learning Engineer",
-    alt: "Skill badge logo",
-    bullets: [
-      "Performed exploratory data analysis and feature engineering across diverse datasets.",
-      "Built and tuned machine learning models from the ground up to hit targeted outcomes.",
-      "Applied advanced statistical techniques to improve data quality, raising predictive accuracy by 35%.",
+      "Built scalable loan systems in Java/Spring Boot, improving efficiency by 30%.",
+      "Resolved production issues with Git/Jenkins workflows, cutting complaints by 20%.",
+      "Automated event streaming with Kafka to reduce manual effort and costs.",
     ],
   },
 ];

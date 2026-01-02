@@ -11,14 +11,14 @@ function About() {
     <Box className="about-section">
       <Particle />
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center" sx={{ py: 2 }}>
-          <Grid item xs={12} md={7}>
+        <Grid container spacing={6} alignItems="center" sx={{ py: 2 }}>
+          <Grid item xs={12} md={9}>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
               Know Who <span className="purple">I'M</span>
             </Typography>
             <Aboutcard />
           </Grid>
-          <Grid item xs={12} md={5} className="about-img" sx={{ textAlign: "center" }}>
+          <Grid item xs={12} md={3} className="about-img" sx={{ textAlign: "center" }}>
             <Box
               component="img"
               src={laptopImg}
