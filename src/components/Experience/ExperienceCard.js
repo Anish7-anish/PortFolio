@@ -9,7 +9,7 @@ function ExperienceCards({ imgPath, role, company, dates, bullets, alt }) {
         height="220"
         image={imgPath}
         alt={alt || "Experience logo"}
-        className="project-card-img"
+        className="experience-card-img"
       />
       <CardContent>
         <Typography variant="h6" sx={{ fontWeight: 700 }}>
