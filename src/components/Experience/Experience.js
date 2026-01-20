@@ -2,58 +2,41 @@ import React from "react";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import Particle from "../Particle";
 import ExperienceCards from "./ExperienceCard";
-import ncsu from "../../Assets/ncsu.png";
-import ncsubtec from "../../Assets/ncsu_logo.png";
-import cog from "../../Assets/cog_logo.png";
-import isimcha from "../../Assets/iSimcha.png";
+import serviceNowLogo from "../../Assets/servicenow.png";
+import virtualInfotechLogo from "../../Assets/virtual_infotech_solution_logo.png";
 
 const experiences = [
   {
-    imgPath: isimcha,
+    imgPath: serviceNowLogo,
     role: "Software Engineer",
-    company: "iSimcha, LLC",
-    dates: "May 2025 - Present",
-    alt: "iSimcha logo",
+    company: "ServiceNow, IL",
+    dates: "Oct 2024 - Present",
+    alt: "ServiceNow logo",
     bullets: [
-      "Built distributed LLM inference pipelines on GCP, improving throughput by 30% and enabling scalable deployments.",
-      "Fine-tuned healthcare LLMs and integrated LiteLLM, reducing perplexity by 18% and boosting translation accuracy.",
-      "Deployed Cloud Functions + Firestore workflows, improving model selection efficiency by 25%.",
+      "Built reusable React + TypeScript components with Hooks and Context for shared state across internal apps.",
+      "Implemented Node.js/Express services with REST endpoints, request validation middleware, and JWT auth.",
+      "Improved frontend performance by reducing re-renders and applying memoization for faster page responsiveness.",
+      "Containerized backend services with Docker and deployed on AWS ECS with EC2-based infrastructure.",
+      "Integrated OpenAI-powered automation for summarization and classification in internal workflows.",
+      "Added prompt versioning, input sanitization, response validation, and fallback logic for reliability.",
+      "Partnered with PM, QA, and platform teams on reviews, planning, and incident triage.",
+      "Wrote unit/integration tests and supported CI pipelines for stable releases.",
     ],
   },
   {
-    imgPath: ncsu,
-    role: "AI Engineer",
-    company: "North Carolina State University",
-    dates: "May 2025 - Present",
-    alt: "North Carolina State University logo",
-    bullets: [
-      "Built GPT-based NLP models to classify 500+ course objectives with 85% accuracy and flag accessibility gaps.",
-      "Delivered a secure Python/OAuth2 backend for Moodle extraction, cutting audit time by 60%.",
-      "Shipped a React interface with real-time feedback and encryption, improving review efficiency by 40%.",
-    ],
-  },
-  {
-    imgPath: ncsubtec,
+    imgPath: virtualInfotechLogo,
     role: "Software Engineer",
-    company: "North Carolina State University",
-    dates: "September 2023 - May 2025",
-    alt: "NCSU BTEC logo",
+    company: "Virtual Infotech Solution, India",
+    dates: "Sep 2020 - Jul 2023",
+    alt: "Virtual Infotech Solution logo",
     bullets: [
-      "Built an LSTM anomaly detection system for BTEC, improving operational efficiency by 40%.",
-      "Hardened token retrieval + GraphQL flows, reducing data issues by 30%.",
-      "Created AWS-backed analytics and serverless APIs, boosting reliability and automation.",
-    ],
-  },
-  {
-    imgPath: cog,
-    role: "Software Engineer",
-    company: "Cognizant Technology Solutions",
-    dates: "February 2023 - June 2023",
-    alt: "Cognizant logo",
-    bullets: [
-      "Built scalable loan systems in Java/Spring Boot, improving efficiency by 30%.",
-      "Resolved production issues with Git/Jenkins workflows, cutting complaints by 20%.",
-      "Automated event streaming with Kafka to reduce manual effort and costs.",
+      "Delivered full-stack apps with React, Node.js, and Django based on client workflows.",
+      "Built REST APIs with PostgreSQL/MongoDB, including CRUD, validation, and role-based access.",
+      "Crafted responsive UI with HTML5, CSS3, Tailwind, and modern JavaScript.",
+      "Integrated Firebase and third-party services for auth, notifications, and real-time sync.",
+      "Optimized slow queries with indexing and ORM tuning to improve API latency.",
+      "Deployed on AWS and GCP with environment config, monitoring, and access control.",
+      "Participated in code reviews, debugging, and production issue resolution.",
     ],
   },
 ];

@@ -14,17 +14,17 @@ function AboutCard() {
           North Carolina.
           <br />
           <br />
-          I currently work at iSimcha, LLC, where I build and deploy scalable, distributed LLM
-          inference pipelines on cloud platforms.
+          I currently work at ServiceNow, building internal web apps in React and TypeScript, and
+          developing Node.js/Express services with reliable REST APIs and authentication.
+          <br />
+          <br />
+          Earlier in my career at Virtual Infotech Solution, I delivered full-stack applications
+          with React, Django, and Node.js, and supported cloud deployments on AWS and GCP.
           <br />
           <br />
           I completed my Master of Computer Science from North Carolina State University in May
           2025, with a strong focus on machine learning, distributed systems, and full-stack
           development.
-          <br />
-          <br />
-          I’m actively seeking full-time Software Development Engineer (SDE) or Machine Learning
-          Engineer (MLE) roles where I can design and deliver production-grade, high-impact systems.
           <br />
           <br />
           Apart from coding, some other activities that I love to do!
