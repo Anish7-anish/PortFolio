@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Box, Typography, IconButton, Stack } from "@mui/material";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
@@ -42,16 +42,6 @@ function Footer() {
               sx={{ color: "#ffffff" }}
             >
               <FaLinkedinIn />
-            </IconButton>
-            <IconButton
-              component="a"
-              href="https://www.instagram.com/anishhh_07"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              sx={{ color: "#ffffff" }}
-            >
-              <AiFillInstagram />
             </IconButton>
           </Stack>
         </Box>

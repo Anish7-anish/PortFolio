@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Grid, Typography, Box, IconButton, Stack } from "@mui/material";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt/dist/index.umd.js";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -15,22 +15,25 @@ function Home2() {
               LET ME <span className="purple">INTRODUCE</span> MYSELF
             </Typography>
             <Typography className="home-about-body">
-              I fell in love with programming and I have at least learnt something, I think…
-              <br />
-              <br />I am fluent in powerful languages like
-              <b className="purple"> Python, Java and JavaScript.</b>
-              <br />
-              <br />
-              My fields of interest include building innovative
-              <b className="purple"> Web Technologies and Products </b>
-              as well as exploring the exciting domains of
-              <b className="purple"> Machine Learning and Data Science.</b>
+              I build production-grade
+              <b className="purple"> AI/ML systems</b> across NLP, predictive analytics, deep
+              learning, and MLOps.
               <br />
               <br />
-              Whenever possible, I also channel my passion into developing solutions using
-              <b className="purple"> React.js, Spring</b> and
-              <b className="purple"> cutting-edge tools</b> like
-              <b className="purple"> Tensorflow and Keras</b>.
+              My core stack includes
+              <b className="purple"> Python, SQL, PyTorch, TensorFlow, Scikit-learn,</b> and
+              <b className="purple"> Hugging Face</b> for model development and experimentation.
+              <br />
+              <br />
+              I have recent experience building
+              <b className="purple"> LLM and RAG applications</b>, clinical NLP pipelines,
+              semantic search systems, and real-time inference services.
+              <br />
+              <br />
+              I also work heavily with
+              <b className="purple"> Spark, FastAPI, Flask, Docker, Kubernetes, AWS SageMaker,</b>
+              and
+              <b className="purple"> Databricks</b> to deploy and monitor scalable ML workflows.
             </Typography>
           </Grid>
           <Grid item xs={12} md={4} className="myAvtar">
@@ -66,16 +69,6 @@ function Home2() {
               className="home-social-icons"
             >
               <FaLinkedinIn />
-            </IconButton>
-            <IconButton
-              component="a"
-              href="https://www.instagram.com/anishhh_07"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="home-social-icons"
-            >
-              <AiFillInstagram />
             </IconButton>
           </Stack>
         </Box>
