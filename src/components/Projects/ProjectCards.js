@@ -14,7 +14,15 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 function ProjectCards({ imgPath, title, description, ghLink, demoLink, alt }) {
   return (
     <Card className="project-card-view">
-      <CardMedia component="img" height="220" image={imgPath} alt={alt || title} className="project-card-img" />
+      {imgPath && (
+        <CardMedia
+          component="img"
+          height="220"
+          image={imgPath}
+          alt={alt || title}
+          className="project-card-img"
+        />
+      )}
       <CardContent>
         <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
           {title}
@@ -23,30 +31,34 @@ function ProjectCards({ imgPath, title, description, ghLink, demoLink, alt }) {
           {description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ px: 2, pb: 2 }}>
-        <Stack direction="row" spacing={1}>
-          <Button
-            variant="outlined"
-            startIcon={<GitHubIcon />}
-            href={ghLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </Button>
-          {demoLink && (
-            <Button
-              variant="contained"
-              startIcon={<OpenInNewIcon />}
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Demo
-            </Button>
-          )}
-        </Stack>
-      </CardActions>
+      {(ghLink || demoLink) && (
+        <CardActions sx={{ px: 2, pb: 2 }}>
+          <Stack direction="row" spacing={1}>
+            {ghLink && (
+              <Button
+                variant="outlined"
+                startIcon={<GitHubIcon />}
+                href={ghLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </Button>
+            )}
+            {demoLink && (
+              <Button
+                variant="contained"
+                startIcon={<OpenInNewIcon />}
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </Button>
+            )}
+          </Stack>
+        </CardActions>
+      )}
     </Card>
   );
 }

@@ -1,14 +1,30 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import {
-  SiVisualstudiocode,
-  SiVercel,
-  SiMacos,
-  SiIntellijidea,
+  SiApacheairflow,
+  SiDatabricks,
+  SiDocker,
+  SiGooglecloud,
+  SiKubernetes,
+  SiMicrosoftazure,
+  SiMlflow,
   SiAmazonaws,
+  SiVisualstudiocode,
 } from "react-icons/si";
+import { DiGit } from "react-icons/di";
 
-const icons = [SiMacos, SiVisualstudiocode, SiAmazonaws, SiIntellijidea, SiVercel];
+const icons = [
+  SiVisualstudiocode,
+  DiGit,
+  SiAmazonaws,
+  SiMicrosoftazure,
+  SiGooglecloud,
+  SiDocker,
+  SiKubernetes,
+  SiApacheairflow,
+  SiMlflow,
+  SiDatabricks,
+];
 
 function Toolstack() {
   return (

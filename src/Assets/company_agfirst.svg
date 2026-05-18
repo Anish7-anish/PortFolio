@@ -1,0 +1,18 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="36" fill="url(#bg)"/>
+  <circle cx="1048" cy="140" r="170" fill="white" fill-opacity="0.08"/>
+  <circle cx="146" cy="488" r="196" fill="white" fill-opacity="0.07"/>
+  <path d="M160 188C210 126 302 100 390 112C336 140 294 190 268 246C230 234 194 214 160 188Z" fill="#CBE971"/>
+  <path d="M230 288C266 192 350 130 442 126C414 190 366 256 298 308L230 288Z" fill="#F3F9D8"/>
+  <text x="500" y="242" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700">AgFirst</text>
+  <text x="504" y="302" fill="white" fill-opacity="0.9" font-family="Arial, Helvetica, sans-serif" font-size="34">Farm Credit Bank</text>
+  <path d="M160 372H1040" stroke="white" stroke-opacity="0.28" stroke-width="6" stroke-linecap="round"/>
+  <rect x="160" y="410" width="420" height="64" rx="32" fill="white" fill-opacity="0.14" stroke="white" stroke-opacity="0.22" stroke-width="3"/>
+  <text x="208" y="451" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Forecasting • Lending</text>
+  <defs>
+    <linearGradient id="bg" x1="82" y1="54" x2="1080" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#146734"/>
+      <stop offset="1" stop-color="#2F8F3D"/>
+    </linearGradient>
+  </defs>
+</svg>

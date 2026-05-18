@@ -1,10 +1,18 @@
 import React from "react";
-import { Container, Grid, Typography, Box } from "@mui/material";
+import { Container, Grid, Typography, Box, Card, CardContent } from "@mui/material";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+
+const education = [
+  {
+    degree: "Bachelor of Technology in Artificial Intelligence",
+    school: "Anurag Group of Institutions",
+    dates: "Aug 2012 - May 2016",
+  },
+];
 
 function About() {
   return (
@@ -32,6 +40,29 @@ function About() {
           Professional <span className="purple">Skillset</span>
         </Typography>
         <Techstack />
+
+        <Typography variant="h4" className="project-heading" sx={{ fontWeight: 700, mt: 3 }}>
+          <span className="purple">Education</span>
+        </Typography>
+        <Grid container spacing={3} sx={{ py: 3 }}>
+          {education.map((item) => (
+            <Grid key={item.degree} item xs={12} md={6}>
+              <Card sx={{ borderRadius: 3, height: "100%" }}>
+                <CardContent>
+                  <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                    {item.degree}
+                  </Typography>
+                  <Typography variant="body1" sx={{ mt: 1, color: "text.secondary" }}>
+                    {item.school}
+                  </Typography>
+                  <Typography variant="body2" sx={{ mt: 0.5, color: "text.secondary" }}>
+                    {item.dates}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
 
         <Typography variant="h4" className="project-heading" sx={{ fontWeight: 700, mt: 3 }}>
           <span className="purple">Tools</span> I use

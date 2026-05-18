@@ -10,21 +10,23 @@ function AboutCard() {
     >
       <CardContent sx={{ px: { xs: 3, md: 4 }, py: { xs: 3, md: 4 } }}>
         <Typography variant="body1" sx={{ lineHeight: 1.9, color: "text.secondary", textAlign: "left" }}>
-          I’m <span className="purple">Anish Rao Toorpu</span>, a Software Engineer based in Raleigh,
-          North Carolina.
+          I’m <span className="purple">Anish Rao Toorpu</span>, an AI/ML Engineer with 9+ years of
+          experience designing, training, and deploying machine learning systems in production.
           <br />
           <br />
-          I currently work at ServiceNow, building internal web apps in React and TypeScript, and
-          developing Node.js/Express services with reliable REST APIs and authentication.
+          I currently work at Pfizer, where I build NLP, predictive analytics, and RAG-based
+          solutions for clinical document analysis, patient risk assessment, and healthcare data
+          workflows.
           <br />
           <br />
-          Earlier in my career at Virtual Infotech Solution, I delivered full-stack applications
-          with React, Django, and Node.js, and supported cloud deployments on AWS and GCP.
+          Across previous roles at Exxon Mobil, AgFirst, JM Family Enterprises, and The Bridge
+          Corp, I have delivered predictive maintenance models, semantic search systems, customer
+          analytics, recommendation engines, and large-scale ML data pipelines.
           <br />
           <br />
-          I completed my Master of Computer Science from North Carolina State University in May
-          2025, with a strong focus on machine learning, distributed systems, and full-stack
-          development.
+          My work spans feature engineering, deep learning, GenAI applications, REST inference
+          APIs, experiment tracking, CI/CD, model monitoring, and cloud deployment across AWS,
+          Azure, and GCP.
           <br />
           <br />
           Apart from coding, some other activities that I love to do!

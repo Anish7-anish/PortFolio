@@ -1,39 +1,33 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
+import { DiPython } from "react-icons/di";
 import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-} from "react-icons/di";
-import {
-  SiMysql,
-  SiSpringboot,
+  SiApachespark,
+  SiDatabricks,
+  SiFastapi,
+  SiFlask,
+  SiMongodb,
+  SiNumpy,
+  SiPandas,
+  SiPostgresql,
+  SiPytorch,
+  SiScikitlearn,
   SiTensorflow,
-  SiRubyonrails,
-  SiKeras,
-  SiGraphql,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 
 const icons = [
   DiPython,
-  DiJavascript1,
-  TbBrandGolang,
-  DiNodejs,
-  DiReact,
-  SiMysql,
-  DiMongodb,
-  SiSpringboot,
-  DiGit,
+  SiPostgresql,
+  SiScikitlearn,
+  SiPytorch,
   SiTensorflow,
-  SiRubyonrails,
-  SiKeras,
-  SiGraphql,
-  DiJava,
+  SiPandas,
+  SiNumpy,
+  SiApachespark,
+  SiFastapi,
+  SiFlask,
+  SiMongodb,
+  SiDatabricks,
 ];
 
 function Techstack() {
