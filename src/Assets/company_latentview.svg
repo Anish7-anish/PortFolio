@@ -1,0 +1,17 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="36" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="170" fill="white" fill-opacity="0.08"/>
+  <circle cx="176" cy="492" r="220" fill="white" fill-opacity="0.06"/>
+  <rect x="112" y="126" width="320" height="64" rx="32" fill="white" fill-opacity="0.14" stroke="white" stroke-opacity="0.24" stroke-width="3"/>
+  <text x="152" y="168" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">EARLY CAREER ML</text>
+  <text x="112" y="286" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700">LatentView</text>
+  <text x="112" y="344" fill="white" fill-opacity="0.84" font-family="Arial, Helvetica, sans-serif" font-size="34">Analytics • Dashboards • Segmentation</text>
+  <rect x="112" y="392" width="298" height="58" rx="29" fill="white" fill-opacity="0.14" stroke="white" stroke-opacity="0.22" stroke-width="3"/>
+  <text x="154" y="430" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Python • SQL • Tableau</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="58" x2="1118" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B2E83"/>
+      <stop offset="1" stop-color="#1C6EA4"/>
+    </linearGradient>
+  </defs>
+</svg>

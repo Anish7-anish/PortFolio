@@ -2,86 +2,91 @@ import React from "react";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import Particle from "../Particle";
 import ExperienceCards from "./ExperienceCard";
-import pfizerVisual from "../../Assets/company_pfizer.svg";
-import exxonMobilVisual from "../../Assets/company_exxonmobil.svg";
-import agFirstVisual from "../../Assets/company_agfirst.svg";
-import jmFamilyVisual from "../../Assets/company_jmfamily.svg";
-import bridgeCorpVisual from "../../Assets/company_bridgecorp.svg";
+import bnyMellonVisual from "../../Assets/company_bnymellon.svg";
+import cignaVisual from "../../Assets/company_cigna.svg";
+import nationwideVisual from "../../Assets/company_nationwide.svg";
+import citibankVisual from "../../Assets/company_citibank.svg";
+import latentViewVisual from "../../Assets/company_latentview.svg";
 
 const experiences = [
   {
-    imgPath: pfizerVisual,
-    role: "AI/ML Engineer",
-    company: "Pfizer | New York, New York",
-    dates: "May 2025 - Present",
-    alt: "Pfizer company visual",
-    accent: "#0B5ED7",
+    imgPath: bnyMellonVisual,
+    role: "AI / ML Engineer - Generative AI",
+    company: "BNY Mellon | New York, NY",
+    dates: "Jan 2025 - Present",
+    alt: "BNY Mellon company visual",
+    accent: "#1F2A78",
     bullets: [
-      "Built NLP and predictive analytics models for clinical document analysis, patient risk assessment, and healthcare data processing.",
-      "Developed LLM and RAG solutions for intelligent automation and knowledge retrieval in clinical workflows.",
-      "Implemented MLOps pipelines with CI/CD, experiment tracking, model versioning, and production monitoring.",
-      "Deployed Flask and FastAPI inference services for real-time enterprise integration.",
-      "Improved clinical document retrieval accuracy by 28% through embedding optimization and RAG pipelines.",
+      "Built and deployed RAG services that let internal teams query policy, procedure, and product documents with grounded answers and citations.",
+      "Developed ingestion, parsing, chunking, and embedding pipelines for PDFs, SharePoint content, and enterprise APIs to improve retrieval quality.",
+      "Built multi-step agentic workflows with LangGraph for orchestration, tool calling, fallback handling, and controlled execution flows.",
+      "Implemented Model Context Protocol servers so LLM agents could connect to internal document stores, databases, and tools through a standard interface.",
+      "Exposed GenAI services as FastAPI endpoints, containerized them with Docker, and supported deployment, scaling, and observability on AWS.",
+      "Set up CI/CD, guardrails, evaluation, model routing, and token and cost monitoring across GPT-4o, Claude, and open-weight models.",
     ],
   },
   {
-    imgPath: exxonMobilVisual,
-    role: "AI/ML Engineer",
-    company: "Exxon Mobil | Irving, Texas",
-    dates: "Jan 2023 - Apr 2025",
-    alt: "Exxon Mobil company visual",
-    accent: "#E1251B",
+    imgPath: cignaVisual,
+    role: "Machine Learning Engineer",
+    company: "Cigna | Bloomfield, CT",
+    dates: "Sep 2023 - Dec 2024",
+    alt: "Cigna company visual",
+    accent: "#0070A8",
     bullets: [
-      "Architected scalable ML systems spanning data ingestion, distributed training, and real-time inference for production AI applications.",
-      "Built enterprise GenAI applications with LLMs, vector databases, embedding pipelines, and RAG frameworks.",
-      "Designed predictive maintenance and anomaly detection models for refinery equipment using telemetry data and deep learning.",
-      "Implemented MLOps ecosystems with CI/CD, validation, governance, and automated retraining.",
-      "Reduced anomaly detection response time by 35% by optimizing streaming inference workflows.",
+      "Built and deployed NLP models over clinical notes and call transcripts to extract structured information for operations and analytics teams.",
+      "Developed named entity recognition and text classification services with spaCy and Hugging Face transformers and packaged them as APIs.",
+      "Evaluated Azure OpenAI workflows and built an early RAG prototype over policy and coverage documents for enterprise healthcare use cases.",
+      "Fine-tuned transformer models on healthcare text with parameter-efficient methods and reviewed outputs with subject matter experts.",
+      "Built PySpark ETL pipelines and gradient boosting models for claim triage and prioritization over large healthcare datasets.",
+      "Deployed and monitored NLP and ML services across Azure ML and GCP using Docker and MLflow under strict privacy controls.",
     ],
   },
   {
-    imgPath: agFirstVisual,
-    role: "ML Engineer",
-    company: "AgFirst | Columbia, South Carolina",
-    dates: "Jul 2020 - Dec 2022",
-    alt: "AgFirst company visual",
-    accent: "#2F8F3D",
+    imgPath: nationwideVisual,
+    role: "Machine Learning Engineer",
+    company: "Nationwide | Columbus, OH",
+    dates: "Jan 2022 - May 2023",
+    alt: "Nationwide company visual",
+    accent: "#1A3D7C",
     bullets: [
-      "Developed and deployed ML models with Scikit-learn, TensorFlow, and PyTorch for lending and financial analytics use cases.",
-      "Built feature pipelines, large-scale data workflows, and model monitoring systems for production reliability.",
-      "Created time-series forecasting models with ARIMA, LSTM, and Prophet for seasonal financial trend prediction.",
-      "Improved forecasting accuracy by 22% through ensemble methods and optimized feature engineering.",
-      "Integrated cloud platforms and CI/CD orchestration to accelerate training, deployment, and monitoring.",
+      "Built predictive models for underwriting and claims use cases, taking them from exploration through to deployment.",
+      "Created text analytics on adjuster notes and claim descriptions using TF-IDF and embeddings to support classification and pattern detection.",
+      "Developed classification and regression models with scikit-learn and XGBoost, with strong validation and overfitting controls.",
+      "Moved model workflows into repeatable scheduled pipelines using Python, SQL, and Docker instead of one-off scripts.",
+      "Used AWS S3 and EC2 for cloud-based data and training workloads and set up monitoring to track model performance after deployment.",
+      "Built dashboards and documented modeling assumptions, limitations, and A/B-style checks for business partners.",
     ],
   },
   {
-    imgPath: jmFamilyVisual,
-    role: "ML Engineer",
-    company: "JM Family Enterprises | Deerfield Beach, Florida",
-    dates: "Oct 2018 - Jun 2020",
-    alt: "JM Family Enterprises company visual",
-    accent: "#2E698F",
+    imgPath: citibankVisual,
+    role: "Machine Learning Engineer",
+    company: "Citibank | New York, NY",
+    dates: "Dec 2019 - Dec 2021",
+    alt: "Citibank company visual",
+    accent: "#C91F37",
     bullets: [
-      "Built predictive models across classification, regression, clustering, and forecasting to support business decision-making.",
-      "Developed customer segmentation and recommendation systems to improve automotive service engagement and retention.",
-      "Created dashboards and visualizations with Tableau, Power BI, Matplotlib, and Seaborn for stakeholder reporting.",
-      "Deployed ML models as REST APIs using Flask and FastAPI for real-time inference.",
-      "Increased customer segmentation accuracy by 18% through optimized clustering and feature engineering.",
+      "Built fraud and risk detection models over large transaction datasets, with attention to class imbalance and precision and recall tradeoffs.",
+      "Developed customer analytics models for segmentation and churn analysis to support business and risk teams.",
+      "Deployed models into reliable batch scoring pipelines and processed large banking datasets on Hadoop and Hive platforms.",
+      "Wrote complex SQL and reproducible Python preparation steps across banking data warehouses and source systems.",
+      "Applied NLP to customer interaction text for classification and keyword extraction.",
+      "Documented model logic, dashboards, and validation artifacts to satisfy regulated model governance workflows.",
     ],
   },
   {
-    imgPath: bridgeCorpVisual,
-    role: "Data Scientist",
-    company: "The Bridge Corp | Hyderabad, India",
-    dates: "Sep 2016 - May 2018",
-    alt: "The Bridge Corp company visual",
-    accent: "#F97316",
+    imgPath: latentViewVisual,
+    role: "Junior ML Engineer",
+    company: "LatentView Analytics | Chennai, India",
+    dates: "Apr 2017 - Oct 2019",
+    alt: "LatentView company visual",
+    accent: "#4B2E83",
     bullets: [
-      "Designed end-to-end data science solutions for customer analytics, sales forecasting, and business reporting.",
-      "Applied statistical testing, regression modeling, clustering, and recommendation techniques to improve decision support.",
-      "Built scalable data pipelines with Python, SQL, Pandas, and NumPy for large structured and unstructured datasets.",
-      "Developed ML services with Scikit-learn and TensorFlow and exposed them through REST APIs.",
-      "Delivered dashboards and visualizations that made analytical insights accessible to technical and business teams.",
+      "Built analysis and reporting for consumer and retail clients and translated client requirements into clear analytical tasks.",
+      "Wrote SQL to pull and transform data and used Python to clean, analyze, and summarize findings.",
+      "Built early predictive models such as customer segmentation solutions with scikit-learn.",
+      "Created dashboards and visualizations in Tableau so client teams could track key metrics clearly.",
+      "Performed exploratory data analysis, documented assumptions, and developed strong clean-code and version-control habits.",
+      "Supported multiple projects in parallel and built a solid foundation in data handling and analytical thinking.",
     ],
   },
 ];
@@ -95,7 +100,7 @@ function Experience() {
           My <span className="purple">Work Experience</span>
         </Typography>
         <Typography sx={{ color: "text.secondary", mt: 1 }}>
-          AI/ML roles across healthcare, energy, finance, automotive, and enterprise analytics.
+          Generative AI, NLP, and machine learning roles across banking, healthcare, insurance, and financial services.
         </Typography>
         <Grid container spacing={3} sx={{ mt: 2 }}>
           {experiences.map((experience) => (

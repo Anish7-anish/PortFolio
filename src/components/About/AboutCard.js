@@ -10,23 +10,29 @@ function AboutCard() {
     >
       <CardContent sx={{ px: { xs: 3, md: 4 }, py: { xs: 3, md: 4 } }}>
         <Typography variant="body1" sx={{ lineHeight: 1.9, color: "text.secondary", textAlign: "left" }}>
-          I’m <span className="purple">Anish Rao Toorpu</span>, an AI/ML Engineer with 9+ years of
-          experience designing, training, and deploying machine learning systems in production.
+          I’m <span className="purple">Anish Rao Toorpu</span>, an AI / ML Engineer with around
+          nine years of experience building machine learning systems and shipping them into
+          production.
           <br />
           <br />
-          I currently work at Pfizer, where I build NLP, predictive analytics, and RAG-based
-          solutions for clinical document analysis, patient risk assessment, and healthcare data
-          workflows.
+          I currently work at BNY Mellon, where I build Generative AI services for enterprise
+          knowledge retrieval, including RAG pipelines, LangGraph-based agentic workflows, and
+          Model Context Protocol integrations.
           <br />
           <br />
-          Across previous roles at Exxon Mobil, AgFirst, JM Family Enterprises, and The Bridge
-          Corp, I have delivered predictive maintenance models, semantic search systems, customer
-          analytics, recommendation engines, and large-scale ML data pipelines.
+          Across earlier roles at Cigna, Nationwide, Citibank, and LatentView Analytics, I have
+          shipped clinical NLP services, underwriting and claims models, fraud analytics, customer
+          segmentation workflows, and analytics platforms for business teams.
           <br />
           <br />
-          My work spans feature engineering, deep learning, GenAI applications, REST inference
-          APIs, experiment tracking, CI/CD, model monitoring, and cloud deployment across AWS,
-          Azure, and GCP.
+          I treat ML work like software: design the data flow, build the model or retrieval layer,
+          expose clean APIs, add CI/CD and monitoring, and leave behind documentation that the
+          rest of the team can extend.
+          <br />
+          <br />
+          My toolkit spans Python, SQL, PySpark, FastAPI, scikit-learn, XGBoost, PyTorch,
+          Hugging Face, LangChain, LangGraph, FAISS, Pinecone, MLflow, Docker, and cloud
+          platforms across AWS, Azure, and GCP.
           <br />
           <br />
           Apart from coding, some other activities that I love to do!

@@ -5,34 +5,34 @@ import Particle from "../Particle";
 
 const projects = [
   {
-    title: "Clinical NLP and RAG Systems",
+    title: "Enterprise RAG With Citations",
     description:
-      "Built clinical document analysis and patient risk workflows using NLP, predictive analytics, LLMs, and RAG-based retrieval patterns to support healthcare automation at scale.",
+      "Built retrieval systems over policy, procedure, and product documents with ingestion, chunking, embeddings, reranking, citations, and grounded answers for internal teams.",
   },
   {
-    title: "Predictive Maintenance and Anomaly Detection",
+    title: "Agentic Workflows and MCP",
     description:
-      "Designed telemetry-driven anomaly detection and predictive maintenance solutions for refinery and manufacturing systems, with real-time inference and distributed processing workflows.",
+      "Built multi-step GenAI workflows with LangGraph and exposed internal tools and data sources through Model Context Protocol servers for cleaner enterprise integrations.",
   },
   {
-    title: "Enterprise GenAI Knowledge Retrieval",
+    title: "Clinical NLP and Healthcare Retrieval",
     description:
-      "Integrated transformer models, embeddings, vector search, and RAG pipelines to build semantic search and knowledge retrieval systems for operational and domain-specific documentation.",
+      "Developed NLP pipelines over clinical notes, transcripts, and policy documents using transformers, Azure OpenAI patterns, PySpark ETL, and monitored model APIs.",
   },
   {
-    title: "Financial Forecasting and Lending Analytics",
+    title: "Underwriting and Claims Modeling",
     description:
-      "Developed forecasting and customer analytics workflows using ARIMA, LSTM, Prophet, and ensemble methods to improve seasonal trend prediction and operational planning in financial domains.",
+      "Built predictive models, text analytics, and scheduled scoring pipelines for underwriting and claims workflows using scikit-learn, XGBoost, SQL, Docker, and AWS.",
   },
   {
-    title: "Segmentation and Recommendation Engines",
+    title: "Fraud and Risk Analytics",
     description:
-      "Built customer segmentation, clustering, and recommendation solutions to improve personalization, targeting, and retention across enterprise business workflows.",
+      "Shipped fraud detection, churn, and segmentation models over large transaction datasets, with batch scoring pipelines, Hadoop and Hive processing, and governance-ready validation.",
   },
   {
-    title: "MLOps and Model Monitoring",
+    title: "MLOps and Service Delivery",
     description:
-      "Implemented CI/CD, experiment tracking, model versioning, drift detection, automated retraining, and cloud deployment patterns using Docker, Kubernetes, SageMaker, Databricks, and MLflow.",
+      "Implemented CI/CD, containerized services, experiment tracking, evaluation harnesses, monitoring, and cost controls across FastAPI, MLflow, Docker, AWS, Azure ML, and GCP.",
   },
 ];
 
@@ -42,10 +42,10 @@ function Projects() {
       <Particle />
       <Container maxWidth="lg">
         <Typography variant="h3" className="project-heading" sx={{ fontWeight: 700 }}>
-          My projects
+          Featured work areas
         </Typography>
         <Typography sx={{ color: "text.secondary", mt: 1 }}>
-          Resume-backed problem areas and systems I have worked on across recent roles.
+          Resume-backed systems and problem areas from my latest AI, ML, and GenAI roles.
         </Typography>
         <Grid container spacing={3} sx={{ mt: 2 }}>
           {projects.map((project) => (

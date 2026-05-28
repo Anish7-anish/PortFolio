@@ -35,7 +35,7 @@ function ResumeNew() {
             startIcon={<AiOutlineDownload />}
             sx={{ maxWidth: 250 }}
           >
-            Download CV
+            Download Resume
           </Button>
           <Box className="resume">
             <Document file={pdf} onLoadSuccess={handleLoadSuccess}>
@@ -56,7 +56,7 @@ function ResumeNew() {
             startIcon={<AiOutlineDownload />}
             sx={{ maxWidth: 250 }}
           >
-            Download CV
+            Download Resume
           </Button>
         </Stack>
       </Container>

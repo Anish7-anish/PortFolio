@@ -8,9 +8,9 @@ import Toolstack from "./Toolstack";
 
 const education = [
   {
-    degree: "Bachelor of Technology in Artificial Intelligence",
-    school: "Anurag Group of Institutions",
-    dates: "Aug 2012 - May 2016",
+    degree: "Bachelor of Technology in Computer Science",
+    school: "Vellore Institute of Technology, India",
+    dates: "Graduated May 2017",
   },
 ];
 
