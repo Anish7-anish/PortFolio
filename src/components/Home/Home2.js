@@ -15,25 +15,27 @@ function Home2() {
               LET ME <span className="purple">INTRODUCE</span> MYSELF
             </Typography>
             <Typography className="home-about-body">
-              I build production-grade
-              <b className="purple"> AI/ML systems</b> across NLP, predictive analytics, deep
-              learning, and MLOps.
+              I build production-ready
+              <b className="purple"> AI/ML and Generative AI systems</b> with a strong software
+              engineering mindset.
               <br />
               <br />
-              My core stack includes
-              <b className="purple"> Python, SQL, PyTorch, TensorFlow, Scikit-learn,</b> and
-              <b className="purple"> Hugging Face</b> for model development and experimentation.
+              Over the last several years I have focused on
+              <b className="purple"> LLM applications</b> across banking, healthcare, and
+              insurance, including RAG, agentic workflows, and Model Context Protocol
+              integrations.
               <br />
               <br />
-              I have recent experience building
-              <b className="purple"> LLM and RAG applications</b>, clinical NLP pipelines,
-              semantic search systems, and real-time inference services.
+              My day-to-day stack includes
+              <b className="purple"> Python, SQL, PySpark, FastAPI, scikit-learn, XGBoost,</b>
+              <b className="purple"> PyTorch, Hugging Face, LangChain, LangGraph,</b> and
+              <b className="purple"> LlamaIndex</b>.
               <br />
               <br />
-              I also work heavily with
-              <b className="purple"> Spark, FastAPI, Flask, Docker, Kubernetes, AWS SageMaker,</b>
-              and
-              <b className="purple"> Databricks</b> to deploy and monitor scalable ML workflows.
+              I also work across
+              <b className="purple"> FAISS, Pinecone, Docker, MLflow, GitHub Actions, AWS
+              SageMaker, Azure ML,</b> and
+              <b className="purple"> GCP</b> to ship scalable, monitored services.
             </Typography>
           </Grid>
           <Grid item xs={12} md={4} className="myAvtar">
