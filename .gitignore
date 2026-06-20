@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
+package-lock.json/
 # Node
 node_modules/
 
@@ -18,6 +19,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+node_modules/
 lib64/
 parts/
 sdist/
